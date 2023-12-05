@@ -1,6 +1,6 @@
 <template>
   <div class="postit-form">
-    <form class="postit-form__form" @submit.prevent="createPostIt">
+    <form class="postit-form__form" @click="createPostIt">
       <!-- Title Field -->
       <div class="postit-form__form-group">
         <label for="title">Title</label>
@@ -102,7 +102,7 @@ export default {
         !this.postItData.priority ||
         !this.postItData.content
       ) {
-        alert("Rellena los campos obligatorios");
+        alert("Please fill all the mandatory fields");
         return;
       }
 
